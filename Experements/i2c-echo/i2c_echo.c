@@ -27,9 +27,10 @@ int main (int argc, char ** argv) {
   char buf[10];
   while(1) {
     /* Using I2C Read, equivalent of i2c_smbus_read_byte(file) */
-    if (read(file, buf, 1) != 1) {
+    int res = read(file, buf, 1);
+    if (res != 1) {
       /* ERROR HANDLING: i2c transaction failed */
-      printf("read failed !!!!!!");
+      printf("read failed !!!!!!%d\n", res);
     } else {
       /* buf[0] contains the read byte */
       putc(buf[0], stdin);
