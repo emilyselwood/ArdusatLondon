@@ -16,7 +16,7 @@ int main (int argc, char ** argv) {
     return(1);
   }
   
-  int addr = 0x40; /* The I2C address */
+  int addr = 0x04; /* The I2C address */
 
   if (ioctl(file, I2C_SLAVE, addr) < 0) {
     /* ERROR HANDLING; you can check errno to see what went wrong */
