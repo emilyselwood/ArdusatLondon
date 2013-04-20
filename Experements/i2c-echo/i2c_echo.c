@@ -30,7 +30,6 @@ int main (int argc, char ** argv) {
     if (read(file, buf, 1) != 1) {
       /* ERROR HANDLING: i2c transaction failed */
       printf("read failed !!!!!!");
-      return(1);
     } else {
       /* buf[0] contains the read byte */
       putc(buf[0], stdin);
