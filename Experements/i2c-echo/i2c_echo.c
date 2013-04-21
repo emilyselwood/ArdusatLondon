@@ -18,11 +18,11 @@ int main (int argc, char ** argv) {
   
   int addr = 0x04; /* The I2C address */
 
-  /*if (ioctl(file, I2C_SLAVE, addr) < 0) {
+  if (ioctl(file, I2C_SLAVE, addr) < 0) {
     // ERROR HANDLING; you can check errno to see what went wrong 
     printf("ARRRGGGGGGGG ioctl failed\n");
     return(1);
-  }*/
+  }
   
   char buf[10];
   while(1) {
